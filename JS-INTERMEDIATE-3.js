@@ -19,16 +19,19 @@ function calculateAverage(students) {
 
 // To find grade according to average marks
 function determineGrade(average) {
-    if (average < 60) {
-        return 'F';
-    } else if (average < 70) {
-        return 'D';
-    } else if (average < 80) {
-        return 'C';
-    } else if (average < 90) {
-        return 'B';
-    } else {
-        return 'A';
+    const roundedAverage = Math.floor(average / 10); // 63/0 = 6.3 => Math.floor(6.3) = 6
+
+    switch (roundedAverage) {
+        case 6:
+            return 'D';
+        case 7:
+            return 'C';
+        case 8:
+            return 'B';
+        case 9: 
+            return 'A';
+        default:
+            return 'F'; 
     }
 }
 
