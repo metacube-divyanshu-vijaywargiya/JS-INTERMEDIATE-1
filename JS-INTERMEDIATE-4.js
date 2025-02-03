@@ -15,12 +15,8 @@ function lcm(a, b) {
 
 // to calculate the LCM
 function lcm_more_than_two_numbers(numbers) {
-    let result = numbers[0];
-
-    for (let i = 1; i < numbers.length; i++) {
-        result = lcm(result, numbers[i]);
-    }
-    return result;
+    let result = numbers.reduce((temp, current) => lcm(temp, current));
+    return result ;
 }
 
 // Testing
