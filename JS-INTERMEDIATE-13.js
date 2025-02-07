@@ -20,7 +20,7 @@ function merge(leftArray , rightArray){
     // till both arrays have elements
     while(leftArray.length && rightArray.length){
         if(leftArray[0] <= rightArray[0]){
-            sortedArray.push(leftArray.shift()); //shift because we want to remove that elememnt from leftArray
+            sortedArray.push(leftArray.shift()); //shift because we want to remove that elememnt from leftArray and access the remvoed element
         }else{
             sortedArray.push(rightArray.shift());
         }
